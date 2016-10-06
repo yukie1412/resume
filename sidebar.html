@@ -1,0 +1,59 @@
+<div class="row">
+	<div class="col-xs-12"><div class="white-bkg"></div></div>
+	<div class="col-xs-12">
+		<div class="white-border">
+			<img aria-hidden="true" src="./maple_leaf.png" alt="maple leaf icon" 
+			     class="img-circle logo img-responsive center-block">
+		</div>
+		<div class="caption text-center">
+			<h1 class="resume-header">
+				Jennifer <br />Qiao <hr />
+				<small>Front-End Engineer</small>
+			</h1>
+		</div>
+	</div>
+</div>
+
+<div class="row padding-top">
+	<div class="col-xs-11 col-xs-offset-1">
+		<div class="ribbon">
+			<strong class="ribbon-title">Education</strong>
+		</div>
+	</div>
+	<div class="col-xs-11 col-xs-offset-1">
+		<div class="ribbon-content">
+			<i aria-hidden="true" class="fa icon-fixed-width fa-graduation-cap"></i> 
+			<a href="http://uwaterloo.ca/" target="_blank">
+				<strong class="text-normal">University of Waterloo</strong>
+			</a>
+			<div style="padding-left: 25px;"><small>Bachelor of CS 2013</small></div>
+			<ul>
+				<li class="text-normal internal-spacing">Computer Science</li>
+				<li class="text-normal internal-spacing">French Minor</li>
+				<li class="text-normal internal-spacing">Co-operative Program</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="row padding-top">
+	<div class="col-xs-11 col-xs-offset-1">
+		<div class="ribbon">
+			<strong class="ribbon-title">Contact Me</strong>
+		</div>
+	</div>
+	<div class="col-xs-11 col-xs-offset-1">
+		<div class="ribbon-content">
+			<div ng-repeat="p in profile track by $index" class="internal-spacing">
+				<a href="{{p.href}}:{{p.text}}" ng-if="p.href" class="text-normal">
+					<i aria-hidden="true" class="fa icon-fixed-width" ng-class="p.icon"></i> 
+					<span ng-bind="p.text"></span>
+				</a>
+				<div ng-if="!p.href" class="text-normal">
+					<i aria-hidden="true" class="fa icon-fixed-width" ng-class="p.icon"></i> 
+					<span ng-bind="p.text"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

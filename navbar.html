@@ -1,0 +1,39 @@
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#dropdown-content" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand">Jennifer Qiao
+				<small style="margin-left: 5px">Front-End Engineer</small>
+			</a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="dropdown-content">
+			<ul class="nav navbar-nav">
+				<li class="list-group-item">
+					<i aria-hidden="true" class="fa icon-fixed-width fa-graduation-cap"></i> University of Waterloo
+					<br /><small>Bachelor of CS 2013</small>
+					<ul class="list-group">
+						<li class="list-group-item">Computer Science</li>
+						<li class="list-group-item">French Minor</li>
+						<li class="list-group-item">Co-operative Program</li>
+					</ul>
+				</li>
+				<li ng-repeat="p in profile track by $index" class="list-group-item">
+					<a href="{{p.href}}:{{p.text}}" ng-if="p.href" class="text-normal">
+						<i aria-hidden="true" class="fa icon-fixed-width" ng-class="p.icon"></i>
+						<span ng-bind="p.text"></span>
+					</a>
+					<div ng-if="!p.href" class="text-normal">
+						<i aria-hidden="true" class="fa icon-fixed-width" ng-class="p.icon"></i>
+						<span ng-bind="p.text"></span>
+					</div>
+				</li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav>

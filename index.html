@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" ng-app="resume" ng-controller="resumeCtrl">
+<head>
+	<meta charset="utf-8">
+
+	<title>Jennifer Qiao Resume</title>
+	<meta name="description" content="Jennifer Qiao's resume for front-end engineering position">
+	<meta name="keywords" content="Resume, Front-end Engineer">
+	<meta name="author" content="Jennifer Qiao">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="./style.css" />
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-svg-round-progressbar/0.4.4/roundProgress.min.js"></script>
+	<script type="text/javascript" src="./controller.js"></script>
+	<script type="text/javascript" src="./service.js"></script>
+</head>
+
+<body>
+	<div class="container row">
+		<div class="col-lg-3 col-sm-4 hidden-xs" style="position: absolute;height: 100%">
+			<div class="sidebar" ng-include="'./sidebar.html'"></div>
+		</div>
+		<div class="visible-xs">
+			<div ng-include="'./navbar.html'"></div>
+		</div>
+		<div class="col-lg-9 col-sm-8 pull-right">
+			<div class="main-content" ng-include="'./content.html'"></div>
+		</div>
+	</div>
+</body>
+</html>
