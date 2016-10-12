@@ -33,6 +33,13 @@
 						<span ng-bind="p.text"></span>
 					</div>
 				</li>
+				<li class="divider"></li>
+				<li ng-repeat="skill in skills.proficient track by $index" class="list-group-item">
+					<i class="fa fa-star"></i> <span ng-bind="skill"></span>
+				</li>
+				<li ng-repeat="skill in skills.knowledgeable track by $index" class="list-group-item">
+					<i class="fa fa-star-half-o"></i> <span ng-bind="skill"></span>
+				</li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</div><!-- /.container-fluid -->

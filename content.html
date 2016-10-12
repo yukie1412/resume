@@ -1,53 +1,65 @@
 <div class="row">
-	<h2 class="resume-header main-heading" style="margin-bottom: 0">
+	<h2 class="resume-header main-heading">
 		<span class="line-through">Experiences</span>
 	</h2>
 
-	<div class="col-sm-12">
-		<section id="timeline">
-			<div ng-repeat="experience in experiences track by $index" class="timeline-block">
-				<div>
-					<div class="flag">
-						<span class="visible-xs" ng-bind="experience.time.simple"></span>
-						<div class="dot"></div>
-					</div>
+	<section id="timeline">
+		<div ng-repeat="experience in experiences track by $index" class="timeline-block">
+			<div>
+				<div class="flag">
+					<span class="visible-xs" ng-bind="experience.time.simple"></span>
+					<div class="dot"></div>
 				</div>
-				<div class="timeline-content">
-					<div class="timeline-chevron"></div>
-					<div class="page-header" style="margin:0 0 10px;">
-						<small class="pull-right hidden-xs" ng-bind="experience.time.full"></small>
-						<h3 style="margin:0;">
-							<span ng-bind="experience.title"></span>
-							<small class="extra-small pointer" ng-bind="experience.company" 
-								   ng-click="toLink(experience.link)"></small>
-						</h3>
-					</div>
-					<div>
-						<ul class="tags">
-							<li ng-repeat="tag in experience.tags track by $index" class="tag" ng-bind="tag"></li>
-						</ul>
-						<div class="task" ng-repeat="task in experience.tasks track by $index" ng-bind="task">
-						</div>
+			</div>
+			<div class="timeline-content">
+				<div class="timeline-chevron"></div>
+				<div class="page-header" style="margin:0 0 10px;">
+					<small class="pull-right hidden-xs" ng-bind="experience.time.full"></small>
+					<h3 style="margin:0;">
+						<span ng-bind="experience.title"></span>
+						<small class="extra-small pointer" ng-bind="experience.company" 
+							   ng-click="toLink(experience.link)"></small>
+					</h3>
+				</div>
+				<div>
+					<ul class="tags">
+						<li ng-repeat="tag in experience.tags track by $index" class="tag" ng-bind="tag"></li>
+					</ul>
+					<div class="task" ng-repeat="task in experience.tasks track by $index" ng-bind="task">
 					</div>
 				</div>
 			</div>
-		</section>
-	</div>
+		</div>
+	</section>
 </div>
 
 <div class="row">
 	<h2 class="resume-header main-heading">
-		<span class="line-through">Skills</span>
+		<span class="line-through">Miscellenous</span>
 	</h2>
-	<div class="col-sm-4 col-xs-6" ng-repeat="skill in skills track by $index">
-		<div class="graph">
-			<round-progress max="100" current="skill.value" color="orangered" bgcolor="rgba(170,170,170,0.5)"
-			                radius="100" stroke="20" semi="true" rounded="false" clockwise="true"
-			                responsive="true"></round-progress>
-			<div class="graph-label">
-				<div>{{skill.value}}%</div>
-				<small ng-bind="skill.text"></small>
+
+	<section id="timeline">
+		<div ng-repeat="item in miscellenous track by $index" class="timeline-block">
+			<div>
+				<div class="flag">
+					<span class="visible-xs" ng-bind="item.time.simple"></span>
+					<div class="dot"></div>
+				</div>
+			</div>
+			<div class="timeline-content">
+				<div class="timeline-chevron"></div>
+				<div class="page-header" style="margin:0 0 10px;">
+					<small class="pull-right hidden-xs" ng-bind="item.time.full"></small>
+					<h3 style="margin:0;">
+						<span ng-bind="item.title"></span>
+						<small class="extra-small pointer" ng-bind="item.program" 
+							   ng-click="toLink(item.link)"></small>
+					</h3>
+				</div>
+				<div>
+					<div class="task" ng-bind="item.description"></div>
+				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 </div>

@@ -1,1 +1,1 @@
-var app=angular.module("resume",["angular-svg-round-progressbar"]);app.controller("resumeCtrl",["$scope","resumeApi",function(e,r){e.profile=r.getProfile(),e.skills=r.getSkills(),e.experiences=r.getExperience(),e.toLink=function(e){window.open(e,"_blank")}}]);
+var app=angular.module("resume",[]);app.controller("resumeCtrl",["$scope","resumeApi",function(e,l){e.profile=l.getProfile(),e.skills=l.getSkills(),e.experiences=l.getExperience(),e.miscellenous=l.getMiscellenous(),e.loopMax=new Array(10),e.toLink=function(e){window.open(e,"_blank")}}]);

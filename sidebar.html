@@ -57,3 +57,21 @@
 		</div>
 	</div>
 </div>
+
+<div class="row padding-top">
+	<div class="col-xs-11 col-xs-offset-1">
+		<div class="ribbon">
+			<strong class="ribbon-title">Skills</strong>
+		</div>
+	</div>
+	<div class="col-xs-11 col-xs-offset-1">
+		<div class="ribbon-content">
+			<div ng-repeat="skill in skills.proficient track by $index" class="internal-spacing">
+				<i class="fa fa-star"></i> <span ng-bind="skill"></span>
+			</div>
+			<div ng-repeat="skill in skills.knowledgeable track by $index" class="internal-spacing">
+				<i class="fa fa-star-half-o"></i> <span ng-bind="skill"></span>
+			</div>
+		</div>
+	</div>
+</div>
