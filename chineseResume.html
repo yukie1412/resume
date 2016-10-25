@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en" ng-app="resume" ng-controller="resumeCtrl">
+<html lang="en" ng-app="resume" ng-controller="resumeCnCtrl">
 <head>
 	<meta charset="utf-8">
 
-	<title>Jennifer Qiao Resume</title>
-	<meta name="description" content="Jennifer Qiao's resume for front-end engineering position">
-	<meta name="keywords" content="Resume, Front-end Engineer">
+	<title>Jennifer 的簡歷</title>
+	<meta name="description" content="Jennifer 的簡歷">
+	<meta name="keywords" content="簡歷，前端工程師">
 	<meta name="author" content="Jennifer Qiao">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,6 +19,7 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./controller.js"></script>
 	<script type="text/javascript" src="./service.js"></script>
+	<script type="text/javascript" src="./serviceCn.js"></script>
 </head>
 
 <body>
@@ -30,7 +31,7 @@
 			<div ng-include="'./navbar.html'"></div>
 		</div>
 		<div class="col-lg-9 col-sm-8 pull-right">
-			<div class="main-content" ng-include="'./content.html'"></div>
+			<div class="main-content chinese" ng-include="'./content.html'"></div>
 		</div>
 	</div>
 </body>
