@@ -17,8 +17,10 @@
 					<small class="pull-right hidden-xs" ng-bind="experience.time.full"></small>
 					<h3 style="margin:0;">
 						<span ng-bind="experience.title"></span>
-						<small class="extra-small pointer" ng-bind="experience.company" 
-							   ng-click="toLink(experience.link)"></small>
+						<small class="extra-small pointer" ng-click="toLink(experience.link)">
+							<span ng-bind="experience.company"></span>
+							<span class="hidden-xs ml-2">({{ experience.address }})</span>
+						</small>
 					</h3>
 				</div>
 				<div>
